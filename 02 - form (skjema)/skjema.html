@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduksjon til HTML & CSS</title>
+        <!-- Koble til eksternt stylesheet og JavaScript -->
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Enkel container for innholdet -->
+    <div class="container">
+            <!-- Toppseksjon med tittel og kort forklaring -->
+            <header>
+                    <h1>Introduksjon til grunnleggende HTML & CSS</h1>
+                    <p class="lead">Dette eksempelet viser vanlige HTML-tagger og hvordan CSS brukes for å style dem. Kommenter og utforsk koden!</p>
+            </header>
+
+            <!-- Navigasjon (eksempel på <nav>) -->
+            <nav aria-label="Hurtiglenker">
+                    <a href="#struktur">HTML-struktur</a>
+                    <a href="#form">Formeksempel</a>
+                    <a href="#css">CSS-eksempel</a>
+            </nav>
+
+            <main>
+                    <!-- Seksjon som demonstrerer grunnleggende strukturtagger -->
+                    <section id="struktur">
+                            <h2>Grunnleggende HTML-tagger</h2>
+                            <!-- Hovedpunkter: overskrifter, avsnitt, lister, lenker og bilder -->
+                            <h3>Overskrifter</h3>
+                            <!-- H1 er viktigst, h2..h6 mindre viktige -->
+                            <h1>Eksempel på &lt;h1&gt;</h1>
+                            <h2>Eksempel på &lt;h2&gt;</h2>
+
+                            <h3>Avsnitt</h3>
+                            <p>Dette er et vanlig avsnitt markert med &lt;p&gt;. Bruk avsnitt for å dele tekster i logiske blokker.</p>
+
+                            <h3>Lister</h3>
+                            <p>Uordnet liste (&lt;ul&gt;) og ordnet liste (&lt;ol&gt;):</p>
+                            <ul>
+                                    <li>Element i en uordnet liste</li>
+                                    <li>Et annet element</li>
+                            </ul>
+                            <ol>
+                                    <li>Første</li>
+                                    <li>Andre</li>
+                            </ol>
+
+                            <h3>Lenker, bilder og video</h3>
+                            <p>Lenke: <a href="https://www.example.com" target="_blank" rel="noopener">Gå til example.com</a></p>
+                            <!-- Bildet viser bruk av alt-tekst som er viktig for uu (universell utforming) -->
+                            <figure>
+                                    <img src="https://images.unsplash.com/photo-1755282464678-31862372f805?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Eksempel-bilde" width="480" />
+                                    <figcaption>Et eksempelbilde fra Unsplash.</figcaption>
+                            </figure>
+                            <figure>
+                                <iframe width="480" height="270" src="https://youtube.com/embed/3rHolw6p_QY?si=GKQqq1VgLSl7ONWy" frameborder="0"></iframe>
+                                <figcaption>Videoen fra YouTube er lagt inn vha. en iframe.</figcaption>
+                            </figure>
+
+                            <h3>Kode og sitater</h3>
+                            <p>Inline-kode: <code>&lt;div&gt;...&lt;/div&gt;</code></p>
+                            <blockquote>Dette er et sitat markert med &lt;blockquote&gt;.</blockquote>
+                    </section>
+
+                    <!-- Form-seksjon som demonstrerer ulike input-typer -->
+                    <section id="form">
+                            <h2>Formeksempel (&lt;form&gt;)</h2>
+                            <p>Skjema med flere input-typer og en enkel JS-håndtering.</p>
+
+                            <!-- form: action er tom fordi vi håndterer innsending i JavaScript for demonstrasjon -->
+                            <form id="kontaktSkjema">
+                                    <!-- Tekstfelt -->
+                                    <label for="navn">Navn:</label>
+                                    <input type="text" id="navn" name="navn" placeholder="Skriv ditt navn" required>
+
+                                    <!-- E-post -->
+                                    <label for="epost">E-post:</label>
+                                    <input type="email" id="epost" name="epost" placeholder="navn@eksempel.no" required>
+
+                                    <!-- Passord (visuell demonstrasjon) -->
+                                    <label for="passord">Passord:</label>
+                                    <input type="password" id="passord" name="passord" placeholder="passord">
+
+                                    <!-- Checkbox og radio -->
+                                    <fieldset>
+                                            <legend>Velg interesser</legend>
+                                            <label><input type="checkbox" name="interesse" value="koding"> Koding</label>
+                                            <label><input type="checkbox" name="interesse" value="design"> Design</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                            <legend>Kjønn (radio)</legend>
+                                            <label><input type="radio" name="kjonn" value="mann"> Mann</label>
+                                            <label><input type="radio" name="kjonn" value="kvinne"> Kvinne</label>
+                                            <label><input type="radio" name="kjonn" value="annet"> Annet / Vil ikke oppgi</label>
+                                    </fieldset>
+
+                                    <!-- Select / dropdown -->
+                                    <label for="fag">Favorittfag:</label>
+                                    <select id="fag" name="fag">
+                                            <option value="html">HTML</option>
+                                            <option value="css">CSS</option>
+                                            <option value="js">JavaScript</option>
+                                    </select>
+
+                                    <!-- Tekstområde -->
+                                    <label for="melding">Melding:</label>
+                                    <textarea id="melding" name="melding" rows="4" placeholder="Skriv en kort melding..."></textarea>
+
+                                    <!-- Submit-knapp -->
+                                    <button type="submit" class="btn">Send</button>
+                            </form>
+
+                            <!-- Et sted å vise hva brukeren skrev (JS viser dette) -->
+                            <div id="resultat" aria-live="polite"></div>
+                    </section>
+
+                    <!-- Seksjon som forklarer CSS-grunnleggende -->
+                    <section id="css">
+                            <h2>Hvordan CSS påvirker utseendet</h2>
+                            <p>CSS velger HTML-elementer og endrer farger, avstand og layout.</p>
+                            <p>Se <code>style.css</code> for kommentarer om hvordan ulike regler fungerer.</p>
+                            <div class="eksempel-css">
+                                <p class="viktig">Dette er et eksempel på en CSS-klasse (<code>.viktig</code>).</p>
+                            </div>
+                    </section>
+            </main>
+
+            <footer>
+                    <p>Lag et eget eksperiment: endre tekst, farger eller legg til flere tagger!</p>
+            </footer>
+    </div>
+</body>
+</html>

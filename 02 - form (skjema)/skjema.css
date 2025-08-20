@@ -1,0 +1,109 @@
+/* Reset noen marginer for konsistent utseende */
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	background: #f7f9fc;
+	color: #222;
+}
+
+.container {
+	max-width: 900px;
+	margin: 32px auto;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #e3e6ea;
+	border-radius: 8px;
+}
+
+header h1 {
+	margin: 0 0 8px 0;
+	font-size: 1.8rem;
+}
+.lead {
+	color: #555;
+	margin-top: 0;
+}
+
+nav {
+	margin: 16px 0;
+}
+nav a {
+	margin-right: 12px;
+	color: #000000;
+    background-color: #afafaf;
+	text-decoration: none;
+    padding: 1em; 
+}
+nav a:hover { 
+    text-decoration: underline;
+    background-color: #585858;
+}
+
+main section { margin-bottom: 24px; }
+
+/* Lister: standard spacing */
+ul, ol {
+	margin-left: 24px;
+}
+
+/* Bilder og figure */
+figure { margin: 12px 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Enkel visuell stil for skjema */
+form {
+	display: grid;
+	gap: 8px;
+	max-width: 520px;
+}
+label { font-weight: 600; }
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+fieldset {
+	border: 1px dashed #ddd;
+	padding: 8px;
+}
+
+.btn {
+	background: #0366d6;
+	color: #fff;
+	border: none;
+	padding: 10px 14px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.btn:hover { opacity: 0.95; }
+
+/* Eksempelklasse for å vise hvordan .viktig fungerer */
+.viktig {
+	background: #fff3cd;
+	border-left: 4px solid #ffd966;
+	padding: 8px;
+}
+
+/* Resultatvisning */
+#resultat {
+	margin-top: 12px;
+	padding: 10px;
+	background: #f1f8ff;
+	border: 1px solid #dceefc;
+	border-radius: 4px;
+}
+
+/* Footer */
+footer { margin-top: 20px; color: #666; font-size: 0.9rem; }
+
+/* Små skjermer */
+@media (max-width: 600px) {
+	.container { margin: 12px; padding: 12px; }
+	header h1 { font-size: 1.4rem; }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Introduksjon til HTML & CSS</title>
+	<link rel="stylesheet" href="grunnleggende.css">
+	<script src="grunnleggende.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>Grunnleggende HTML og CSS</h1>
+		<p>Se gjennom, forstå koden, og forsøk deretter å endre og utvide koden!</p>
+	</header>
+
+	<main>
+
+        <section>
+            <h2>Lenker, bilder og video</h2>
+            
+            <p>Lenke: <a href="https://www.example.com" target="_blank" rel="noopener">Gå til example.com</a></p>
+            <!-- Bildet viser bruk av alt-tekst som er viktig for uu (universell utforming) -->
+            
+            <figure>
+                    <img src="https://images.unsplash.com/photo-1755282464678-31862372f805?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Eksempel-bilde" width="480" />
+                    <figcaption>Et eksempelbilde fra Unsplash.</figcaption>
+            </figure>
+            
+            <figure>
+                <iframe width="480" height="270" src="https://youtube.com/embed/3rHolw6p_QY?si=GKQqq1VgLSl7ONWy" frameborder="0"></iframe>
+                <figcaption>Videoen fra YouTube er lagt inn vha. en iframe.</figcaption>
+            </figure>
+        <section>
+
+        <section>
+            <h2>Lister</h2>
+            <p>
+                Du kan bruke en nummerert liste:
+            </p>
+            <ol>
+                <li>En</li>
+                <li>To</li>
+                <li>Tre</li>
+            </ol>
+            <p>
+                Du kan bruke en unummerert liste:
+            </p>
+            <ul>
+                <li>En</li>
+                <li>To</li>
+                <li>Tre</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Eksempel på enkelt skjema</h2>
+            <p>Fyll ut skjemaet under for å se hvordan det fungerer:</p>
+            
+            <form id="demoSkjema">
+                <label for="navn">Navn:</label>
+                <input id="navn" name="navn" type="text" placeholder="Skriv navn" required>
+
+                <label for="epost">E-post:</label>
+                <input id="epost" name="epost" type="email" placeholder="navn@eksempel.no">
+
+                <button type="submit" id="btn">Send</button>
+            </form>
+
+            <div id="resultat"></div>
+        </section>
+
+	</main> <!-- Avslutter main -->
+
+	<footer>
+		<p>Fotnote eller instruksjon</p>
+	</footer>
+</body>
+</html>
