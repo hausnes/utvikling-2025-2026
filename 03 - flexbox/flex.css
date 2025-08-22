@@ -4,7 +4,7 @@ body {
 
     /* Fordi barna til body skal følge flexbox-reglene (bør helst være en samleboks i stedet for) */
     display: flex;
-    flex-direction: row; /* bruk normal rekkefølge, row-reverse om du ønsker motsatt */
+    flex-direction: row-reverse; /* bruk normal rekkefølge, row-reverse om du ønsker motsatt */
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
@@ -27,7 +27,32 @@ figure img {
 
 main {
     flex: 1;
-    
+
     /* flex: 1 1 55%;  */
     /* tekstdelen får resten */
 }
+
+/* Responsiv: på små skjermer vil vi stable innholdet vertikalt
+     og plassere `main` over `figure` (slik at bildet havner under teksten).
+     column-reverse gjør at den visuelle rekkefølgen blir main -> figure. */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column-reverse; /* main over figure */
+        align-items: stretch; /* la elementene fylle bredden */
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    figure, main {
+        flex: none; /* ikke la dem dele flex-vokseplass */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    figure img {
+        width: 80%;
+        height: auto;
+        display: block;
+    }
+}
+
