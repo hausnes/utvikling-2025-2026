@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 1rem;
+
+    /* Fordi barna til body skal følge flexbox-reglene (bør helst være en samleboks i stedet for) */
+    display: flex;
+    flex-direction: row; /* bruk normal rekkefølge, row-reverse om du ønsker motsatt */
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+figure {
+    /* flex: 1 1 40%;  */
+    /* gir bildet ~40% av bredden, men lar det krympe/vekse */
+
+    flex: 1;
+    max-width: none;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    flex: 1;
+    
+    /* flex: 1 1 55%;  */
+    /* tekstdelen får resten */
+}
