@@ -1,0 +1,48 @@
+nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+}
+
+/* Styling for <details>-meny */
+details.meny {
+    display: inline-block;
+    position: relative; /* gjør at meny-innhold kan posisjoneres absolutt */
+}
+
+details.meny summary {
+    list-style: none; /* fjern trekanten i noen nettlesere */
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    background: #fff;
+}
+
+/* Menyinnhold posisjonert rett under summary */
+.meny-innhold {
+    display: none; /* skjules når details ikke er open */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    min-width: 200px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    z-index: 20; /* sørg for at menyen ligger over annet innhold */
+}
+
+/* Når details er åpent: vis innholdet */
+details.meny[open] .meny-innhold {
+    display: block;
+}
+
+/* Litt mellomrom og styling for lenkene i menyen */
+.meny-innhold a { display: block; padding: 0.25rem 0; color: #0366d6; text-decoration: none; }
+.meny-innhold a:hover { text-decoration: underline; }
